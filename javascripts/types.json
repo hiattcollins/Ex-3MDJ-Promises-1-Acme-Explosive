@@ -5,6 +5,54 @@
             "category": 0,
             "name": "personal",
             "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+        	"id": 1,
+            "category": 0,
+            "name": "professional",
+            "description": "Fireworks intended for professionally produced displays"
+        },
+        {
+        	"id": 2,
+            "category": 0,
+            "name": "cinematic",
+            "description": "Fireworks designed for film production use"
+        },
+        {
+        	"id": 3,
+            "category": 1,
+            "name": "commercial",
+            "description": "Charges designed for demolition of small commercial structures"
+        },
+        {
+        	"id": 4,
+            "category": 1,
+            "name": "industrial",
+            "description": "Charges designed for demolition of large industrial structures"
+        },
+        {
+        	"id": 5,
+            "category": 1,
+            "name": "infrastructure",
+            "description": "Charges designed for the largest infrastructure projects"
+        },
+        {
+        	"id": 6,
+            "category": 2,
+            "name": "mineshaft",
+            "description": "Mining charges designed for small-shaft mining"
+        },
+        {
+        	"id": 7,
+            "category": 2,
+            "name": "surface",
+            "description": "Mining charges designed for large surface mines"
+        },
+        {
+        	"id": 8,
+            "category": 2,
+            "name": "mountaintop",
+            "description": "Mining charges designed for mountaintop removal mining"
         }
     ]
 }

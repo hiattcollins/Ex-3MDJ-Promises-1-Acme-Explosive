@@ -5,6 +5,90 @@
             "type": 0,
             "name": "Fairy Sparklers",
             "description": "Multi-colored sparklers that are safe for any age."
+        },
+        "roman_candles": {
+            "id": 1,
+            "type": 0,
+            "name": "Roman Candles",
+            "description": "The classic roman candle shoots flaming balls."
+        },
+        "bottle_rockets": {
+            "id": 2,
+            "type": 0,
+            "name": "Bottle Rockets",
+            "description": "Small rockets launch with flaming sparks and report."
+        },
+        "cannonade": {
+            "id": 3,
+            "type": 1,
+            "name": "Cannonade",
+            "description": "Large report followed by starbursts in red and green."
+        },
+        "golden_tree": {
+            "id": 4,
+            "type": 1,
+            "name": "Golden Tree",
+            "description": "Sharp air-burst with descending showers of golden sparks."
+        },
+        "multi_burst": {
+            "id": 5,
+            "type": 1,
+            "name": "Multi Burst",
+            "description": "Up to four large starbursts in various colors."
+        },
+        "car_blast": {
+            "id": 6,
+            "type": 2,
+            "name": "Car Blast",
+            "description": "Simulated automobile explosion."
+        },
+        "miniature": {
+            "id": 7,
+            "type": 2,
+            "name": "Miniature",
+            "description": "Simulated explosions for model miniatures."
+        },
+        "war_film": {
+            "id": 8,
+            "type": 2,
+            "name": "War Film",
+            "description": "Facsimile of ground artillery burst."
+        },
+        "10kg": {
+            "id": 9,
+            "type": 3,
+            "name": "10kg Charge",
+            "description": "10kg commercial demo charge."
+        },
+        "20kg": {
+            "id": 10,
+            "type": 3,
+            "name": "20kg Charge",
+            "description": "20kg commercial demo charge."
+        },
+        "50kg": {
+            "id": 11,
+            "type": 3,
+            "name": "50kg Charge",
+            "description": "50kg commercial demo charge."
+        },
+        "25kg": {
+            "id": 12,
+            "type": 4,
+            "name": "25kg Charge",
+            "description": "25kg industrial demo charge."
+        },
+        "55kg": {
+            "id": 13,
+            "type": 4,
+            "name": "55kg Charge",
+            "description": "55kg industrial demo charge."
+        },
+        "80kg": {
+            "id": 14,
+            "type": 4,
+            "name": "80kg Charge",
+            "description": "80kg industrial demo charge."
         }
     }]
 }
