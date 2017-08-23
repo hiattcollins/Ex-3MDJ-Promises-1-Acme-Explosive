@@ -6,40 +6,29 @@ console.log("main.js");
 
 $(document).ready(function() {
 
-
-
-$("#select-category").change(function() {
-	let categorySelected = $("#select-category").val();
 	let holdCategories;
 	let holdTypes;
 	let holdProducts;
 
+$("#select-category").change(function() {
+	let categorySelected = $("#select-category").val();
+
+	holdCategories = [];
+	holdTypes = [];
+	holdProducts = {};
+
+
+// ********** ********** //
+
+// ********** CLEAR DOM COLUMNS ********** //
+
+		$("#output-row-1").html("");
+		$("#output-row-2").html("");
+		$("#output-row-3").html("");
 
 	console.log("categorySelected", categorySelected);
 
-	// var resultFromLoadCategories = 
-
-	// loadCategories(categorySelected)
-	// .then(resultingCatId => {
-	// 	console.log("** resultingCatId after loadCategories", resultingCatId);
-	// 	printSomething(resultingCatId);
-	// }).then(loadTypes())
-	// .then();
-
-
-
-	// loadedTypes => {
-	// 	console.log("** loadedTypes", loadedTypes);
-	// 	loadProducts();
-
-	// }).then(loadedProducts => {
-	// 	console.log("** loadedProducts", loadedProducts);
-	// 	// logResults(loadedTypes, loadedProducts);
-	// });
-
-
-	// console.log("resultFromLoadCategories", resultFromLoadCategories);
-
+	
 	loadCategories()
 	.then((loadedCategories) => {
 		console.log("loadedCategories =", loadedCategories);
@@ -59,17 +48,18 @@ $("#select-category").change(function() {
 		holdProducts = loadedProducts;
 		console.log("holdProducts", holdProducts);
 
-		
-
-		// return "ham";
+		return sortProducts(categorySelected, holdCategories, holdTypes, holdProducts);
 	})
-	.then(() => {
+	.then((sortedProducts) => {
 		// console.log("loadedProducts in last then:", loadedProducts);
-		console.log("The then after last promise call");
+		console.log("The then after last promise call &&&");
+
+		console.log("sortedProducts", sortedProducts);
+
 
 		// logResults(holdCategories, holdTypes, holdProducts);
-
-		sortProducts(categorySelected, holdCategories, holdTypes, holdProducts);
+		return printLoadedProducts(sortedProducts);
+		
 	});
 });
 
@@ -121,67 +111,50 @@ function sortProducts (inputCategorySelected, inputCategories, inputTypes, input
 
 	});
 
-	console.log("selectedProducts", selectedProducts);
-
-
-	
-
-	// let selectedProducts = $.grep(inputProducts.products[0], (element) => {
-	// 	// $.each(selectedTypes, (key, value) => {
-	// 	// 	if (value.)
-	// 	// });
-	// 	console.log("element", element);
-	// 	return element;
-	// });
-
 	// console.log("selectedProducts", selectedProducts);
 
-	// let selectedProducts = $.grep(inputProducts.products[0])
-
-	// $.each(inputCategories.categories, (key, value) => {
-	// 	console.log("key:", key, "value:", value);
-	// 	console.log("value.name", value.name);
-	// 	let categoryName = value.name;
-
-	// 	if (categoryName === inputCategorySelected) {
-	// 		let categoryId = value.id;
-	// 		console.log("categoryId", categoryId);
-
-	// 		$.each(inputTypes.types, (key, value) => {
-	// 			console.log("inputTypes key:", key, "inputTypes value:", value);
-
-	// 			let typeCategory = value.category;
-	// 			let typeId = value.id;
-
-	// 			if (typeCategory === categoryId) {
-
-	// 				console.log("correct cat inputTypes key:", key, "correct cat inputTypes value:", value);
-
-	// 				// $.each(inputProducts.products, (key, value) => {
-	// 				// 	// console.log("products key:", key, "products value:", value);
-
-	// 				// 	if (){
-
-	// 				// 	}
-	// 				// });
-	// 			}
-
-
-	// 		});
-	// 	}
-	// });
-}
-
-function logResults (input1, input2, input3) {
-	console.log("holdCategories:", input1, "holdTypes:", input2, "holdProducts:", input3);
+	return selectedProducts;
 }
 
 
-function printSomething(input1) {
-	console.log("printSomething triggered");
-	console.log("printSomething input1:", input1);
-	$("#output-div").html(`<h2>${input1}</h2>`);
+
+function printLoadedProducts (loadedProducts) {
+
+	console.log("At printLoadedProducts-->");
+
+	let counter = 0;
+	let rowNumber = 1;
+	let rowID;
+
+	$.each(loadedProducts, (key, value) => {
+		rowID = "#output-row-" + rowNumber;
+
+		console.log("rowID", rowID);
+
+		$(rowID).append(`<div class="col-sm-4">
+							<div><h3>${value.name}</h3></div>
+							<div>${value.category}: ${value.type}</div>
+							<div>${value.description}</div>
+							</div>`);
+		counter += 1;
+		if (counter === 3) {
+			rowNumber += 1;
+			counter -= 3;
+		}
+
+	});
 }
+
+// function logResults (input1, input2, input3) {
+// 	console.log("holdCategories:", input1, "holdTypes:", input2, "holdProducts:", input3);
+// }
+
+
+// function printSomething(input1) {
+// 	console.log("printSomething triggered");
+// 	console.log("printSomething input1:", input1);
+// 	$("#output-div").html(`<h2>${input1}</h2>`);
+// }
 
 function logCategories(input1, input2) {
 	console.log("logCategories loadedCats", input1);
@@ -269,31 +242,6 @@ function loadProducts(input) {
 
 
 
-
-//load data ajax
-// bakery.loadInventory = () => {
-//   return new Promise( function(resolve, reject) {
-//     $.ajax({
-//       url: 'https://general-purpose-31b59.firebaseio.com/items.json?orderBy="typeId"&equalTo="${val}"`'
-//     })
-//     .done(function(data) {
-//       fillInventory(data);
-//       //console.log('inventory', data);
-//       resolve(data);
-//     })
-//     .fail(reject);
-//   });
-// };
-
-// window.loadSongs = function(callBackToInvoke) { 
-//   $.ajax({
-//       url:"songs.json"
-//     }).done(callBackToInvoke)
-//       .fail(function(error) {
-//         console.log("Error:", error);
-//   });
-
-// }
 
 
 });
