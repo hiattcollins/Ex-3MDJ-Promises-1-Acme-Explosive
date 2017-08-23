@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Acme Explosives</title>
-<!-- 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
@@ -12,19 +12,21 @@
 			</header>
 
 			<div id="category-div">
-				<br> <!-- Remove -->
-				<label>Category:</label>
-				<select id="select-category">
-					<option value="Blank">Choose Category</option>
-					<option value="Fireworks">Fireworks</option>
-					<option value="Demolition">Demolition</option>
-					<option value="Mining">Mining</option>
-				</select>
-				<br> <!-- Remove -->
+				<div id="category-menu">
+					<label>Category:</label>
+					<select id="select-category">
+						<option value="Blank">Choose Category</option>
+						<option value="Fireworks">Fireworks</option>
+						<option value="Demolition">Demolition</option>
+						<option value="Mining">Mining</option>
+					</select>
+				</div>
 			</div>
 
-			<div id="output-div">
-				
+			<div id="output-div" class="container">
+				<div class="row" id="output-row-1"></div>
+				<div class="row" id="output-row-2"></div>
+				<div class="row" id="output-row-3"></div>
 			</div>
 
 

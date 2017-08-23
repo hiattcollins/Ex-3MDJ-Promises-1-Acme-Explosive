@@ -54,41 +54,113 @@
             "name": "War Film",
             "description": "Facsimile of ground artillery burst."
         },
-        "10kg": {
+        "comm_15kg": {
             "id": 9,
             "type": 3,
-            "name": "10kg Charge",
-            "description": "10kg commercial demo charge."
+            "name": "Comm. Demo 15kg Charge",
+            "description": "15kg commercial demo charge."
         },
-        "20kg": {
+        "comm_45kg": {
             "id": 10,
             "type": 3,
-            "name": "20kg Charge",
-            "description": "20kg commercial demo charge."
+            "name": "Comm. Demo 45kg Charge",
+            "description": "45kg commercial demo charge."
         },
-        "50kg": {
+        "comm_65kg": {
             "id": 11,
             "type": 3,
-            "name": "50kg Charge",
-            "description": "50kg commercial demo charge."
+            "name": "Comm. Demo 65kg Charge",
+            "description": "65kg commercial demo charge."
         },
-        "25kg": {
+        "ind_30kg": {
             "id": 12,
             "type": 4,
-            "name": "25kg Charge",
-            "description": "25kg industrial demo charge."
+            "name": "Industrial Demo 30kg Charge",
+            "description": "30kg industrial demo charge."
         },
-        "55kg": {
+        "ind_55kg": {
             "id": 13,
             "type": 4,
-            "name": "55kg Charge",
+            "name": "Industrial Demo 55kg Charge",
             "description": "55kg industrial demo charge."
         },
-        "80kg": {
+        "ind_80kg": {
             "id": 14,
             "type": 4,
-            "name": "80kg Charge",
+            "name": "Industrial Demo 80kg Charge",
             "description": "80kg industrial demo charge."
+        },
+        "infr_100kg": {
+            "id": 15,
+            "type": 5,
+            "name": "Infr. Demo 100kg Charge",
+            "description": "100kg infrastructure demo charge."
+        },
+        "infr_250kg": {
+            "id": 16,
+            "type": 5,
+            "name": "Infr. Demo 250kg Charge",
+            "description": "250kg infrastructure demo charge."
+        },
+        "Infr_500kg": {
+            "id": 17,
+            "type": 5,
+            "name": "Infr. Demo 500kg Charge",
+            "description": "500kg infrastructure demo charge."
+        },
+        "shaft_25kg": {
+            "id": 18,
+            "type": 6,
+            "name": "Shaft Mining 25kg Charge",
+            "description": "25kg shaft mining explosives."
+        },
+        "shaft_50kg": {
+            "id": 19,
+            "type": 6,
+            "name": "Shaft Mining 50kg Charge",
+            "description": "50kg shaft mining explosives."
+        },
+        "shaft_100kg": {
+            "id": 20,
+            "type": 6,
+            "name": "Shaft Mining 100kg Charge",
+            "description": "100kg shaft mining explosives."
+        },
+        "surface_125kg": {
+            "id": 21,
+            "type": 7,
+            "name": "Surface Mining 125kg Charge",
+            "description": "125kg surface mining explosives."
+        },
+        "surface_250kg": {
+            "id": 22,
+            "type": 7,
+            "name": "Surface Mining 250kg Charge",
+            "description": "250kg surface mining explosives."
+        },
+        "surface_500kg": {
+            "id": 23,
+            "type": 7,
+            "name": "Surface Mining 500kg Charge",
+            "description": "500kg surface mining explosives."
+        },
+        "mountaintop_200kg": {
+            "id": 24,
+            "type": 8,
+            "name": "Mountaintop Mining 200kg Charge",
+            "description": "200kg mountaintop removal mining explosives."
+        },
+        "mountaintop_400kg": {
+            "id": 25,
+            "type": 8,
+            "name": "Mountaintop Mining 400kg Charge",
+            "description": "400kg mountaintop removal mining explosives."
+        },
+        "mountaintop_800kg": {
+            "id": 26,
+            "type": 8,
+            "name": "Mountaintop Mining 800kg Charge",
+            "description": "800kg mountaintop removal mining explosives."
         }
     }]
 }
